@@ -1,0 +1,3 @@
+                    ${data.map(function(img,index){
+                        return `<img src="${book.images[1].base_url}" alt="">`
+                    }).join('')} 
