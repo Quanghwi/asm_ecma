@@ -22,7 +22,7 @@ const productsPage = function () {
                     <div class="bg-white mt-4 p-3 rounded">
                         <div class="">
                             <a href="/products/detail/${book.id}">
-                                <img class="w-full max-w-[300px] p-3 " src="${book.images[0].base_url}" alt="">
+                                <img class="w-full max-w-[300px] p-3 " src="${book.images?.[0].base_url}" alt="">
                             </a> 
                         </div>
                         <div>

@@ -1,12 +1,21 @@
-import data from '../../db.json' assert {type: 'json'}
+// import data from '../../db.json' assert {type: 'json'}
+import { useState,useEffect } from "../../lib"
 import Header from "./Header"
 import footerPage from './Footer'
 
 
 const productsDetail = function (id) {
-    const book = data.find(function (item) {
-        return item.id == id
-    })
+    const [book,setBook] = useState({})
+    const [data,setData] =useState([])
+
+    useEffect(function(){
+        fetch(`http://localhost:3000/books/${id}`)
+        .then((res) => {
+            return res.json()
+        })
+        .then((data)=>{setBook(data)})
+    },[])
+    
     return `
       <header class="bg-sky-500 grid">
         ${Header()}
@@ -15,18 +24,18 @@ const productsDetail = function (id) {
             <div class=" mt-7 grid grid-cols-[1fr,2fr] gap-5">
 
                 <div class="">
-                    <img class="w-full max-w-[444px]" src="${book.images[0].base_url}" alt="">
+                    <img class="w-full max-w-[444px]" src="${book.images?.[0].base_url}" alt="">
                     <div class="mt-[30px]">
-                    <img class="w-full max-w-[80px] hover:border border-black py-1 inline-block" src="${book.images[0].base_url}" alt="">
-                    <img class="w-full max-w-[80px] hover:border border-black py-1 inline-block" src="${book.images[0].base_url}" alt="">
-                    <img class="w-full max-w-[80px] hover:border border-black py-1 inline-block" src="${book.images[0].base_url}" alt="">
-                    <img class="w-full max-w-[80px] hover:border border-black py-1 inline-block" src="${book.images[0].base_url}" alt="">
+                    <img class="w-full max-w-[80px] hover:border border-black py-1 inline-block" src="${book.images?.[0].base_url}" alt="">
+                    <img class="w-full max-w-[80px] hover:border border-black py-1 inline-block" src="${book.images?.[0].base_url}" alt="">
+                    <img class="w-full max-w-[80px] hover:border border-black py-1 inline-block" src="${book.images?.[0].base_url}" alt="">
+                    <img class="w-full max-w-[80px] hover:border border-black py-1 inline-block" src="${book.images?.[0].base_url}" alt="">
                     </div>
                 </div>
                 <div class="bg-white p-4">
                     <div class="">
                         <div class="text-[13px]">
-                            <p class="inline-block mr-2">Tác giả: <a href="" class="text-blue-500">${book.name}</a></p>
+                            <p class="inline-block mr-2">Tác giả: <a href="" class="text-blue-500">${book.authors?.[0].name || "Không xác định"}</a></p>
                             <p class="inline-block ">Đứng thứ 13 trong <a href="" class="text-blue-500">Top 1000
                             Sách tư duy - Kỹ năng sống
                             bán chạy tháng này</a></p>
@@ -56,21 +65,21 @@ const productsDetail = function (id) {
                 <div class="grid grid-cols-6 gap-2">
                 ${data.map(function (book, index) {
                     return /*html*/`
-                        <div class="bg-white mt-4 p-3 rounded">
-                            <div class="">
-                                <a href="/products/detail/${book.id}">
-                                    <img class="w-full max-w-[300px] p-3 " src="${book.images[0].base_url}" alt="">
-                                </a> 
-                            </div>
-                            <div>
-                                <img src="./Rectangle (1).png" alt="">
-                                <a href="/products/detail/${book.id}" class="mt-1 text-[12px]">${book.name}</a>
-                                <p class="mt-1 text-[12px] ">★★★★★ | đã bán 1000+</p>
-                                <p class="mt-1 text-[12px] text-red-600 text-base">${book.original_price}₫</p>
-                            </div>
-                        </div>
-                    `
-                }).join('')}
+                                    <div class="bg-white mt-4 p-3 rounded">
+                                        <div class="">
+                                            <a href="/products/detail/${book.id}">
+                                                <img class="w-full max-w-[300px] p-3 " src="${book.images?.[0].base_url}" alt="">
+                                            </a> 
+                                        </div>
+                                        <div>
+                                            <img src="./Rectangle (1).png" alt="">
+                                            <a href="/products/detail/${book.id}" class="mt-1 text-[12px]">${book.name}</a>
+                                            <p class="mt-1 text-[12px] ">★★★★★ | đã bán 1000+</p>
+                                            <p class="mt-1 text-[12px] text-red-600 text-base">${book.original_price}₫</p>
+                                        </div>
+                                    </div>
+                                `
+                }).join('')}    
             </div>
             </div>
             <div class="mt-[30px]">
@@ -87,7 +96,7 @@ const productsDetail = function (id) {
                     </thead>
                     <tbody class="ml-[30px] ">
                         <tr>
-                            <td class="block mt-[7px] pl-2">${book.specifications[0].attributes[0].value}</td>
+                            <td class="block mt-[7px] pl-2">${book.specifications?.[0].attributes[0].value}</td>
 
                             <td class="block mt-[7px] bg-gray-50 w-full py-2 pl-2 pr-[450px]">2020-09-01 00:00:00</td>
 
