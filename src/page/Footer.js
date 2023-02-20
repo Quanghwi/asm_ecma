@@ -1,5 +1,5 @@
 const footerPage = () => {
-    return `
+  return `
         <div class="grid grid-cols-5 gap-6 mb-3">
                 <div class="">
                     <h3 class="text-[20px] font-medium">Hỗ trợ khách hàng</h3>
@@ -79,8 +79,7 @@ const footerPage = () => {
             <p class="block text-gray-500 text-[12px]">Giấy chứng nhận Đăng ký Kinh doanh số 0309532909 do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp lần đầu ngày 06/01/2010 và sửa đổi lần thứ 23 ngày 14/02/2022</p>
             <p class="block text-gray-500 text-[12px]">© 2022 - Bản quyền của Công ty TNHH Ti Ki</p>
         </div>
+    `;
+};
 
-    `
-}
-
-export default footerPage
+export default footerPage;
