@@ -1,8 +1,21 @@
-import data from '../../db.json' assert {type: 'json'}
+// import data from '../../db.json' assert {type: 'json'}
+import { useEffect, useState } from '../../lib'
 import { Navigation, Navigation2 } from '../components/navigation'
 
 const productsPage = function () {
+    const [data, setData] = useState([])
 
+    useEffect(function () {
+        fetch('http://localhost:3000/books')
+            .then(function (res) {
+                return res.json()
+            })
+            .then(function (dataFetch) {
+                setData(dataFetch)
+            });
+    }, [])
+
+    
     return `
     <article>
         <div class="banner">
@@ -18,11 +31,11 @@ const productsPage = function () {
 
         <div class="grid grid-cols-4 gap-6">
             ${data.map(function (book, index) {
-                return /*html*/`
+        return /*html*/`
                     <div class="bg-white mt-4 p-3 rounded">
                         <div class="">
                             <a href="/products/detail/${book.id}">
-                                <img class="w-full max-w-[300px] p-3 " src="${book.images?.[0].base_url}" alt="">
+                                <img class="w-full max-w-[300px] p-3 " src="${book.images[0].base_url}" alt="">
                             </a> 
                         </div>
                         <div>
@@ -34,7 +47,7 @@ const productsPage = function () {
                         </div>
                     </div>
                 `
-            }).join('')}
+    }).join('')}
         </div>
         
     </article>

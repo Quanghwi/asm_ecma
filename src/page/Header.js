@@ -2,7 +2,7 @@ const Header = () => {
     return /*html*/`
   
           <div class="logo p-4">
-              <a href=""><img class="w-16" src="./Group 1.svg" alt=""></a>
+              <a href="/"><img class="w-16" src="../../public/Group 1.svg" alt=""></a>
           </div>
           <form action="">
               <input class="mt-5 w-4/5 h-9 p-1" type="text" name="" id="" required>
@@ -17,7 +17,8 @@ const Header = () => {
                   <a href="">Tài khoản ▼</a>
               </div>
               <div class="cart">
-                  <a href=""><i class="fas fa-shopping-cart"></i> Giỏ hàng</a>
+                  <a href="/cart"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a>
+                  <a class="text-white block border w-[120px] pl-3" href="/admin" >Admin pages</a>
               </div>
           </div>
    

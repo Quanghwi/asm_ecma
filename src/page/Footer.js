@@ -36,39 +36,39 @@ const footerPage = () => {
                     <a href="" class="text-gray-500 block text-[12px] hover:text-black hover:underline">Bán hàng cùng Tiki</a>
                     <p class="text-[20px] font-medium mt-5">Chứng nhận bởi</p>
                     <div class="mt-2">
-                        <img class="inline-block w-full max-w-[32px]" src="./Rectangle (5).png" alt="">
-                        <img class="inline-block w-full max-w-[83px] ml-3 " src="./Symbols.png" alt="">
+                        <img class="inline-block w-full max-w-[32px]" src="../../public/Rectangle (5).png" alt="">
+                        <img class="inline-block w-full max-w-[83px] ml-3 " src="../../public/Symbols.png" alt="">
                     </div>
 
                 </div>
                 <div class="">
                     <h3 class="text-[20px] font-medium">Phương thức thanh toán</h3>
-                    <img class="inline-block mt-1" src="./Frame (1).png" alt="">
-                    <img class="inline-block mt-1 ml-1" src="./Frame (2).png" alt="">
-                    <img class="inline-block mt-1 ml-1" src="./Frame (6).png" alt="">
-                    <img class="inline-block mt-1 ml-1" src="./JCB.png" alt="">
-                    <img class="inline-block mt-1 ml-1" src="./ATM.png" alt="">
-                    <img class="inline-block mt-1" src="./VN money.png" alt="">
-                    <img class="inline-block mt-1 ml-1" src="./VN Pay.png" alt="">
-                    <img class="inline-block mt-1 ml-1" src="./Zalo Pay.png" alt="">
-                    <img class="inline-block mt-1 ml-1" src="./tragop.png" alt="">
-                    <img class="inline-block mt-1 ml-1" src="./Moca.png" alt="">
-                    <img class="inline-block mt-1" src="./ATM.png" alt="">
-                    <img class="inline-block mt-1 ml-1" src="./Cash.png" alt="">
+                    <img class="inline-block mt-1" src="../../public/Frame (1).png" alt="">
+                    <img class="inline-block mt-1 ml-1" src="../../public/Frame (2).png" alt="">
+                    <img class="inline-block mt-1 ml-1" src="../../public/Frame (6).png" alt="">
+                    <img class="inline-block mt-1 ml-1" src="../../public/JCB.png" alt="">
+                    <img class="inline-block mt-1 ml-1" src="../../public/ATM.png" alt="">
+                    <img class="inline-block mt-1" src="../../public/VN money.png" alt="">
+                    <img class="inline-block mt-1 ml-1" src="../../public/VN Pay.png" alt="">
+                    <img class="inline-block mt-1 ml-1" src="../../public/Zalo Pay.png" alt="">
+                    <img class="inline-block mt-1 ml-1" src="../../public/tragop.png" alt="">
+                    <img class="inline-block mt-1 ml-1" src="../../public/Moca.png" alt="">
+                    <img class="inline-block mt-1" src="../../public/ATM.png" alt="">
+                    <img class="inline-block mt-1 ml-1" src="../../public/Cash.png" alt="">
                     <p class="text-lg mt-3">Dịch vụ giao hàng</p>
-                    <img class="inline-block mt-1 w-full max-w-[68px]" src="./Tiki Now.png" alt="">
+                    <img class="inline-block mt-1 w-full max-w-[68px]" src="../../public/Tiki Now.png" alt="">
                 </div>
                 <div class="">
                     <h3 class="text-[20px] font-medium">Kết nối với chúng tôi</h3>
-                    <img class="inline-block ml-1" src="./Frame (3).png" alt="">
-                    <img class="inline-block ml-1" src="./Frame (4).png" alt="">
-                    <img class="inline-block ml-1" src="./Frame (5).png" alt="">
+                    <img class="inline-block ml-1" src="../../public/Frame (3).png" alt="">
+                    <img class="inline-block ml-1" src="../../public/Frame (4).png" alt="">
+                    <img class="inline-block ml-1" src="../../public/Frame (5).png" alt="">
                     <p class="text-lg mt-3">Tải ứng dụng trên điện thoại</p>
                     <div class="flex mt-2">
-                        <img class="w-full max-w-[80px]" src="./QR.png" alt="">
+                        <img class="w-full max-w-[80px]" src="../../public/QR.png" alt="">
                         <div class="ml-2">
-                            <a href=""> <img src="./app store.png" alt=""></a>
-                            <a href=""> <img class="mt-1 w-full max-w-[122px]" src="./Rectangle (8).png" alt=""></a>
+                            <a href=""> <img src="../../public/app store.png" alt=""></a>
+                            <a href=""> <img class="mt-1 w-full max-w-[122px]" src="../../public/Rectangle (8).png" alt=""></a>
                         </div>
                     </div>
                 </div>
